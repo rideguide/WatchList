@@ -10,6 +10,7 @@ create table movies
  	directorId_fk int,
  	description text,
  	genere_fk int,
+ 	type boolean,
  	primary key (id_pk)
  );
 
@@ -47,3 +48,21 @@ create table watchlist
  	rating int,
  	primary key (id_pk)
  );
+
+create table director 
+(
+	id_pk int NOT NULL AUTO_INCREMENT,
+ 	name varchar(801),
+ 	primary key (id_pk)
+ );
+
+insert into genere (name) values ('Action');
+insert into genere (name) values ('Thriller');
+insert into genere (name) values ('Drama');
+insert into genere (name) values ("Comedy");
+
+insert into director (name) values ('Christopher Nolan');
+insert into director (name) values ('Stephen Spielberg');
+insert into director (name) values ('Clint Eastwood');
+
+insert into movies (name, directorId_fk, description, genere_fk, type)values ('Inception', 0, 'blablablabalba lbalbalbalbal albal ba', 1, true);
