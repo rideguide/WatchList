@@ -1,4 +1,4 @@
-drop database movieDb;
+drop database if exists movieDb;
 create database movieDb;
 
 use movieDb;
