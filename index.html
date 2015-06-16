@@ -13,6 +13,16 @@
         <link rel="stylesheet" href="css/menu.css" />
 		<link rel="stylesheet" href="css/main.css" />
 
+		<script>
+		
+		$('[data-role="collapsible"]').bind('expand collapse', function (event) {
+			$(this).find('p').slideToggle(500);
+			return false;
+		});​
+
+		</script>
+		
+		
     </head>
     <body>
         
@@ -29,6 +39,8 @@
 				<h4>Passwort</h4>
 				<input type="password" name="passwort"></p>
 				<a href="#menu" ><input value="Anmelden" type="button" name="anmelden" /></a>
+				<a href="#registration">Registrieren</a>
+				
             </div>  <!-- content -->
             
             <div data-role="footer">    <!-- footer -->
@@ -37,6 +49,28 @@
             
         </div>  <!-- page -->
         
+		<div data-role="page" id="registration" data-url="registration" data-theme="a">  <!-- page login -->
+            
+            <div data-role="header">    <!-- header -->
+                <h1>WatchList</h1>
+            </div>  <!-- header -->
+            
+            <div data-role="content">   <!-- content -->
+                <p><h4>E-Mail</h4>
+				<input type="email" name="email">
+				<h4>Passwort</h4>
+				<input type="password" name="passwort"></p>
+				<h4>Passwort wiederholen</h4>
+				<input type="password" name="passwortwiederholen"></p>
+				<a href="#menu" ><input value="Registrieren" type="button" name="anmelden" /></a>
+				<a href="#login">Zurück</a>
+            </div>  <!-- content -->
+            
+            <div data-role="footer">    <!-- footer -->
+                
+            </div>  <!-- footer -->
+            
+        </div>  <!-- page -->
 		
         <div data-role="page" id="menu" data-url="menu" data-theme="a">  <!-- page menu -->
             
@@ -65,7 +99,7 @@
             </div>  <!-- content -->
             
             <div data-role="footer">    <!-- footer -->
-                
+			
             </div>  <!-- footer -->
             
         </div>  <!-- page -->
