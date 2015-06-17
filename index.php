@@ -28,7 +28,7 @@
 					<input type="email" name="email" id="login_email">
 					<h4>Passwort</h4>
 					<input type="password" name="passwort" id="login_passwort"></p>
-					<a href="#menu" data-transition="pop" id="login_absenden"><input value="Anmelden" type="button" name="anmelden" /></a>
+					<a href="#menu" data-transition="pop" id="login_absenden"><input data-corners="true" data-shadow="false" value="Anmelden" type="button" name="anmelden" /></a>
 					<a href="#registration">Registrieren</a>
 				</form>
 				
@@ -43,9 +43,9 @@
 	
 	<?php
 	
-		include "inc/menu.html";
-		include "inc/watchlist.html";
-		include "inc/registration.html";
+		$alle = glob('inc/*.html');
+		foreach($alle as $datei) include $datei;
+		
 	
 	?>
 
