@@ -23,12 +23,14 @@
             </div>  <!-- header -->
             
             <div data-role="content">   <!-- content -->
-                <p><h4>E-Mail</h4>
-				<input type="email" name="email" id="login_email">
-				<h4>Passwort</h4>
-				<input type="password" name="passwort" id="login_passwort"></p>
-				<a href="#menu" data-transition="pop" id="login_absenden"><input value="Anmelden" type="button" name="anmelden" /></a>
-				<a href="#registration">Registrieren</a>
+				<form action="">
+					<p><h4>E-Mail</h4>
+					<input type="email" name="email" id="login_email">
+					<h4>Passwort</h4>
+					<input type="password" name="passwort" id="login_passwort"></p>
+					<a href="#menu" data-transition="pop" id="login_absenden"><input value="Anmelden" type="button" name="anmelden" /></a>
+					<a href="#registration">Registrieren</a>
+				</form>
 				
             </div>  <!-- content -->
             
