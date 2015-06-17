@@ -22,5 +22,4 @@ else
 		});
 	});
 }
-window.name = "";
 });
