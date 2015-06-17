@@ -12,12 +12,20 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<<<<<<< HEAD
 		<script src="js/star-rating/jquery.form.js"></script>
 		<script src="js/star-rating/jquery.MetaData.js"></script>
 		<script src="js/star-rating/jquery.rating.pack.js"></script>
 		<script src="js/star-rating/jquery.rating.js"></script>
 		
 		<link rel="stylesheet" href="js/star-rating/jquery.rating.css" />
+=======
+
+		<script type="text/javascript" src="js/login.js"></script>
+		<script type="text/javascript" src="js/registrate.js"></script>
+        <link rel="stylesheet" href="css/menu.css" />
+
+>>>>>>> origin/master
 		<link rel="stylesheet" href="css/main.css" />
         <link rel="stylesheet" href="css/menu.css" />
 
@@ -33,11 +41,11 @@
             
             <div data-role="content">   <!-- content -->
 				<form action="">
-					<p><h4>E-Mail</h4>
-					<input type="email" name="email" id="login_email">
+					<p><h4>Username</h4>
+					<input type="text" name="username" id="username">
 					<h4>Passwort</h4>
 					<input type="password" name="passwort" id="login_passwort"></p>
-					<a href="#menu" data-transition="pop" id="login_absenden"><input data-corners="true" data-shadow="false" value="Anmelden" type="button" name="anmelden" /></a>
+					<a href="#" data-transition="pop" id="login_absenden"><input data-corners="true" data-shadow="false" value="Anmelden" type="button" name="anmelden" /></a>
 					<a href="#registration">Registrieren</a>
 				</form>
 				
