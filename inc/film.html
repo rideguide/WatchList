@@ -4,30 +4,34 @@
                 <h1>Titel</h1>
             </div>  <!-- header -->
             
-            <div data-role="content">   <!-- content -->
+            <div data-role="content" id="filmDetail">   <!-- content -->
 				
-					<div id="filmtitel" style="font-family:Euphemia;font-size:16pt;font-weight:bold;border-bottom: 1px solid black;">Film A <img style="float:right;" src="" /> </div>	
+					<div id="filmtitel" style="font-family:Euphemia;font-size:16pt;font-weight:bold;border-bottom: 1px solid black;"><p id="detailTitle"></p></div>	
 					<div id="bewertung">
-						<input name="star1" type="radio" class="star"/>
-						<input name="star1" type="radio" class="star"/>
-						<input name="star1" type="radio" class="star"/>
-						<input name="star1" type="radio" class="star"/>
-						<input name="star1" type="radio" class="star"/>
+						<input id="star1" name="star1" type="radio" class="star"/>
+						<input id="star2" name="star1" type="radio" class="star"/>
+						<input id="star3" name="star1" type="radio" class="star"/>
+						<input id="star4" name="star1" type="radio" class="star"/>
+						<input id="star5" name="star1" type="radio" class="star"/>
 					</div>
-					<div id="favorisieren"><img style="float:right;margin:10px;" width="35px" height="35px" src="./img/star.png" ></div>
-					<div id="watchlisthinzu"><img style="float:right; margin:10px;" width="35px" height="35px" src="./img/plus.png" ></div>
-				</div>
 				
-				<div id="filmbeschreibung">
-				<p>
-					<!-- text -->
-				</p>
+					<div id="watchlisthinzu"><a id="addToWl" ><img style="float:right; margin:10px;" width="35px" height="35px" src="./img/plus.png" ></a>
+					</div>
+					<div style="margin-top:50px;">
+						<img src="" class="cover" style="height:200px;">
+						<p style="font-weight:bold;">Director: </p><p id="detailDirector"></p>
+						<p style="font-weight:bold;">Genere: </p><p id="detailGenere"></p>
+						<div id="filmbeschreibung">
+							<p id="detailDescription">
+								<!-- text -->
+							</p>
+					</div>
 				</div>
 			
             </div>  <!-- content -->
             
             <div data-role="footer">    <!-- footer -->
-                
+                <a href="#titel">Zur&uuml;ck</a>
             </div>  <!-- footer -->
             
         </div>  <!-- page -->

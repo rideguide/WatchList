@@ -7,7 +7,7 @@
 	$db = new mysqli($host, $un, $pw, $dbname);
 
 
-	$query = "select * from watchlist";
+	$query = "select film_fk from watchlist where user_fk = 1";
 	$res = $db->query($query);
 	
 	$a = array();

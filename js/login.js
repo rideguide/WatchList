@@ -1,5 +1,5 @@
 $(document).ready(function(){
-if(window.name == "login")
+if(window.name != "")
 {
 	window.location.replace("#menu");
 } 
@@ -16,8 +16,8 @@ else
   		dataType: "json"
 		}).done(function(data){
 			if(data.success){
-				$("#login_absenden").attr("href", "#menu");
-				window.name = "login";
+				window.name = data.id;
+				window.location.replace("#menu");
 			}
 		});
 	});

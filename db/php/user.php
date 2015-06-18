@@ -7,31 +7,15 @@
 	$db = new mysqli($host, $un, $pw, $dbname);
 
 	$username = $_POST['username'];
-	$check = $_POST['ckeck'];
+	$password = hash("sha256",$_POST['password']);
+	$query = "select * from user where username = '".$username."' AND password = '".$password."'";
+	$res = $db->query($query);
 
-	if($check)
-	{
-		$query = "select * from user where username = '".$username;
-		$res = $db->query($query);
-		
-		$a = array();
-		if($res->num_rows > 0){
-			echo json_encode(array("success"=>false));
-		}else{
-			echo json_encode(array("success"=>true));
-		}
-	}
-	else
-	{
-		$password = hash("sha256",$_POST['password']);
-		$query = "select * from user where username = '".$username."' AND password = '".$password."'";
-		$res = $db->query($query);
-		
-		$a = array();
-		if($res->num_rows > 0){
-			echo json_encode(array("success"=>true));
-		}else{
-			echo json_encode(array("success"=>false));
-		}
+
+	$a = array();
+	if($res->num_rows > 0){
+		echo json_encode(array("success"=>true, "id"=>1));
+	}else{
+		echo json_encode(array("success"=>false, "id"=>null));
 	}
 ?>

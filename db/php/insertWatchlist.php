@@ -6,11 +6,13 @@
 	
 	$db = new mysqli($host, $un, $pw, $dbname);
 
-	$username = $_POST['username'];
-	$password = hash("sha256",$_POST['password']);
+	$userID = $_POST['user'];
+	$filmId = $_POST['filmId'];
+	$rating = $_POST['rating'];
 
-	$query = "insert into user (username, password, status) values ('".$username."', '".$password."', true)";
+	$query = "Insert into watchlist (user_fk, film_fk, rating) values (".$userID.", ".$filmId.", ".$rating.")";
 	$res = $db->query($query);
+	
 	echo $query;
 
 	if($res->num_rows > 0){

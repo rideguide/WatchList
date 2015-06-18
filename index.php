@@ -12,20 +12,17 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<<<<<<< HEAD
 		<script src="js/star-rating/jquery.form.js"></script>
 		<script src="js/star-rating/jquery.MetaData.js"></script>
 		<script src="js/star-rating/jquery.rating.pack.js"></script>
 		<script src="js/star-rating/jquery.rating.js"></script>
 		
 		<link rel="stylesheet" href="js/star-rating/jquery.rating.css" />
-=======
 
 		<script type="text/javascript" src="js/login.js"></script>
+		<script type="text/javascript" src="js/film.js"></script>
 		<script type="text/javascript" src="js/registrate.js"></script>
         <link rel="stylesheet" href="css/menu.css" />
-
->>>>>>> origin/master
 		<link rel="stylesheet" href="css/main.css" />
         <link rel="stylesheet" href="css/menu.css" />
 

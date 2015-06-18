@@ -11,6 +11,7 @@ create table movies
  	directorId_fk int,
  	description text,
  	genere_fk int,
+ 	img varchar(64),
  	type boolean,
  	primary key (id_pk)
  );
@@ -66,17 +67,15 @@ insert into director (name) values ('Christopher Nolan');
 insert into director (name) values ('Stephen Spielberg');
 insert into director (name) values ('Clint Eastwood');
 
-insert into movies (name, directorId_fk, description, genere_fk, type)values ('Inception', 0, 'blablablabalba lbalbalbalbal albal ba', 1, true);
+insert into movies (name, directorId_fk, description, genere_fk, img, type)values ('2001', 1, 'fjkasdfödslkjfa', 2, '2001.jpg', true);
+insert into movies (name, directorId_fk, description, genere_fk, img, type)values ('1900', 1, 'sdf asdf sdfg ba', 2, '1900.jpg', true);
+insert into movies (name, directorId_fk, description, genere_fk, img, type)values ('Inception', 1, 'blablablabalba lbalbalbalbal albal ba', 1, 'inception.jpg', true);
 
 insert into user (username, password, status) values ('test', '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08', true);
 
 
-
-
-
-
-
-
+Insert into watchlist (user_fk, film_fk, rating) values (1, 3, 0);
+Insert into watchlist (user_fk, film_fk, rating) values (1, 2, 0);
 
 
 

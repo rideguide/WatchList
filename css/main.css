@@ -7,15 +7,15 @@
 }
 
 .filmmini	{
+	float:left;
 	height:200px;
 	width:140px;
 	border: 1px solid rgb(230,230,230);
 	border-radius: 5px;
 	box-shadow:0 0 3px rgb(200,200,200);
-}
+	margin:  5px;
+	margin-bottom: 30px;
 
-.filmmini:hover	{
-	box-shadow:0 0 10px rgb(150,150,150);
 }
 
 .filmcov	{
@@ -25,8 +25,9 @@
 }
 
 .filmtitel	{
-	height:60px;
+	height:20px;
 	width:130px;
 	padding:5px;
 	margin: 0 auto;
+	text-align: center;
 }

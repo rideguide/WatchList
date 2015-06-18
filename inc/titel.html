@@ -3,13 +3,10 @@
             <div data-role="header"data-theme="b">    <!-- header -->
                 <h1>Titel</h1>
             </div>  <!-- header -->
-            
-            <div data-role="content">   <!-- content -->
+            <input type="text" id="suchefilm1" />
+            <div data-role="content" id="titleContent">   <!-- content -->
 			
-				<div class="filmmini">
-					<div class="filmcov"></div>
-					<div class="filmtitel"></div>
-				</div>
+				
 			
 			
             </div>  <!-- content -->
@@ -19,3 +16,9 @@
             </div>  <!-- footer -->
             
         </div>  <!-- page -->
+
+        <div class="filmmini" id="filmTemp" style="diplay : none;" onClick="">
+		<figure class="filmcov"><img src="" class="titleCover" style="height:200px;">
+		<figcaption class="filmtitel"></figcaption>
+		</figure>
+	</div>

@@ -1,34 +1,46 @@
 $(document).ready(function(){
+	var validun = false;
 
 	$("#registration_username").focusout(function(){
 		var un = $("#registration_username").val();
-		var pw = "";
-		var validun = false;
-		var data = {username: un, check: true};
+
+		
+		var data = {username: un};
 			$.ajax({
-	  		url: "db/php/user.php",
+	  		url: "db/php/registrate.php",
 	  		data: data,
 	  		method:"POST",
 	  		dataType: "json"
 			}).done(function(){
 				if(data.success){
 					validun = true;
-					$("#registration_username").css("box-shadow", "0 0 12px #74FF05");
 				}
 				else
 				{
 					validun = false;
-					$("#registration_username").css("box-shadow", "0 0 12px #FF0000");
 				}
 			});
+	});
+
+	$("#registration_wiederholen" || "#registration_passwort").focusout(function(){
+		var pw1 = $("#registration_passwort").val();
+		var pw2 = $("#registration_wiederholen").val();
+
+		if(pw1 == pw2)
+		{
+			validun = true;
+		}
+		else
+		{
+			validun = false;
+		}
 	});
 
 	$("#registration_absenden").click(function(){
 		var un = $("#registration_username").val();
 		var pw = $("#registration_passwort").val();
 		var pw_re =$("#registration_wiederholen").val();
-		if(pw == pw_re)
-		{
+		if(validun){
 			var data = {username: un, password: pw};
 			$.ajax({
 	  		url: "db/php/insertUser.php",
@@ -39,13 +51,7 @@ $(document).ready(function(){
 				if(data.success){
 					window.location.replace("");
 				}
-				else
-				{
-
-				}
-
 			});
 		}
 	});
-
 });
