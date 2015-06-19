@@ -12,10 +12,8 @@
 
 	$query = "Insert into watchlist (user_fk, film_fk, rating) values (".$userID.", ".$filmId.", ".$rating.")";
 	$res = $db->query($query);
-	
-	echo $query;
 
-	if($res->num_rows > 0){
+	if($res){
 		echo json_encode(array("success"=>true));
 	}else{
 		echo json_encode(array("success"=>false));
