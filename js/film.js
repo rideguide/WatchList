@@ -7,6 +7,9 @@ function loadFilmList(filter)
 	var $content = $("#titleContent");
 	$content.find(".result").remove();
 
+	$("#backButtonFilm").find("a").attr("href","#titel");
+	$("#backButtonFilm").find("a").text("Titel");
+
 	for (var i=0; i<films.length; i++) {
 
 		var id = films[i].Id;
@@ -33,6 +36,8 @@ function loadMyFilmList()
 {
 	var $content = $("#MyContent");
 	$content.find(".result").remove();
+	$("#backButtonFilm").find("a").attr("href","#mywatchlist");
+	$("#backButtonFilm").find("a").text("Watchlist");
 
 	for (var i=0; i<films.length; i++) {
 
@@ -126,8 +131,6 @@ $(document).ready(function(){
 
 	});
 
-	
-
 	$("#menu_titel").click(function(){
 		
 		loadFilmList();
@@ -136,8 +139,8 @@ $(document).ready(function(){
 
 	$("#menu_watchlist").click(function(){
 		
+		$("#watchlisthinzu").show();
 		loadMyFilmList();
-
 	});
 
 	$("#watchlisthinzu").click(function(){
