@@ -7,7 +7,9 @@ function loadFilmList(filter)
 {
 	var $content = $("#titleContent");
 	$content.find(".result").remove();
-
+	$("#bewertung").show();
+	$("#watchlisthinzu").show();
+	
 	$("#backButtonFilm").find("a").attr("href","#titel");
 	$("#backButtonFilm").find("a").text("Titel");
 
@@ -39,6 +41,8 @@ function loadMyFilmList()
 	$content.find(".result").remove();
 	$("#backButtonFilm").find("a").attr("href","#mywatchlist");
 	$("#backButtonFilm").find("a").text("Watchlist");
+	$("#watchlisthinzu").hide();
+	$(".star").attr("disable", "disabled");
 
 	for (var i=0; i<films.length; i++) {
 
