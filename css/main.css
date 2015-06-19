@@ -1,12 +1,12 @@
-.ui-page .ui-header {
-    background: #E82C0C !important;
+.ui-page .ui-header {	
+    background: #E82C0C !important;	/* Header Hintergrund	*/
 }
 
-#abmelden	{
+#abmelden	{	/* Abmeldenbutton */
 	background:gray;
 }
 
-.filmmini	{
+.filmmini	{	/*Film Miniaturbilder und Text --> Filmauflistung */
 	float:left;
 	height:200px;
 	width:140px;
