@@ -9,16 +9,18 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		
+		<!--  JQuery libraries und css -->
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="js/star-rating/jquery.form.js"></script>
 		<script src="js/star-rating/jquery.MetaData.js"></script>
 		<script src="js/star-rating/jquery.rating.pack.js"></script>
-		<script src="js/star-rating/jquery.rating.js"></script>
-		
+		<script src="js/star-rating/jquery.rating.js"></script>		
 		<link rel="stylesheet" href="js/star-rating/jquery.rating.css" />
 
+		
+		<!-- Eigene JS und CSS -->
 		<script type="text/javascript" src="js/login.js"></script>
 		<script type="text/javascript" src="js/film.js"></script>
 		<script type="text/javascript" src="js/registrate.js"></script>
@@ -30,6 +32,7 @@
     </head>
     <body>
         
+	<!-- loginseite -->
     <div data-role="page" id="login" data-url="login" data-theme="a">  <!-- page login -->
             
             <div data-role="header"data-theme="b">    <!-- header -->
@@ -56,7 +59,7 @@
 	
 	
 	<?php
-	
+		/* Alle seiten werden eingebunden */
 		$alle = glob('inc/*.html');
 		foreach($alle as $datei) include $datei;
 		
