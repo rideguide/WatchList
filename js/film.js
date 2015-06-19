@@ -2,6 +2,7 @@
 var films = [];
 var watchlist = [];
 var currentId;
+var rating;
 function loadFilmList(filter)
 {
 	var $content = $("#titleContent");
@@ -100,6 +101,8 @@ function loadFilmData(id)
 
 $(document).ready(function(){
 	var data;
+	$(".rating-cancel").attr("id", "cancelRating");
+
 	$.ajax({
   		url: "db/php/movies.php",
   		data: data,
@@ -132,7 +135,7 @@ $(document).ready(function(){
 	});
 
 	$("#menu_titel").click(function(){
-		
+		$("#watchlisthinzu").show();
 		loadFilmList();
 
 	});
@@ -144,45 +147,7 @@ $(document).ready(function(){
 	});
 
 	$("#watchlisthinzu").click(function(){
-		var rating;
-
-		if(!$("#star5").attr("checked"))
-		{
-			if(!$("#star4").attr("checked"))
-			{
-				if(!$("#star3").attr("checked"))
-				{
-					if(!$("#star2").attr("checked"))
-					{
-						if(!$("#star4").attr("checked"))
-						{
-							rating = 0;
-						}
-						else
-						{
-							rating = 1
-						}
-					}
-					else
-					{
-						rating = 2;
-					}
-				}
-				else
-				{
-					rating = 3;
-				}
-			}
-			else
-			{
-				rating = 4;
-			}
-		}
-		else
-		{
-			rating = 5;
-		}
-
+	
 		var data = {user: window.name, filmId: currentId, rating: rating};
 		console.log(data.user);
 		console.log(data.filmId);
@@ -199,5 +164,28 @@ $(document).ready(function(){
 		});
 	});
 
+	$("#cancelRating").click(function(){
+		rating = 0;
+	});
+
+	$("#star1").click(function(){
+		rating = 1;
+	});
+
+	$("#star2").click(function(){
+		rating = 2;
+	});
+
+	$("#star3").click(function(){
+		rating = 3;
+	});
+
+	$("#star4").click(function(){
+		rating = 4;
+	});
+
+	$("#star5").click(function(){
+		rating = 5;
+	});
 
 });
